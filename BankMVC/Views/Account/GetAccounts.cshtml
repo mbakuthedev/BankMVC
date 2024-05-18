@@ -1,0 +1,42 @@
+﻿@model List<BankApi.Models.GetAccountModel>
+
+<h2>Account List</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Account ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th> Account Name </th>
+                <th> Account Number</th>
+                <th>Account Balance</th>
+                <th>Account Type</th>
+                <!-- Add more table headers as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var account in Model)
+            {
+                <tr>
+                    <td>@account.Id</td>
+                    <td>@account.FirstName</td>
+                    <td>@account.LastName</td>
+                    <td>@account.Email</td>
+                    <td>@account.AccountName</td>
+                    <td>@account.AccountNumberGenerated</td>
+                    <td>@account.CurrentAccountBalance</td>
+                    <td>@account.AccountType</td>
+                   
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No accounts found.</p>
+}

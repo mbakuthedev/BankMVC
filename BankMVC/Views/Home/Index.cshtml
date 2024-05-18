@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form asp-controller="Account" asp-action="GetAccountById" method="get">
+    <div class="form-group">
+        <label for="accountId">Account ID:</label>
+        <input type="text" class="form-control" id="accountId" name="accountId" placeholder="Enter Account ID" required>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+
+<div>
+  @*   @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Account">Go to Account</a>
+    <a href="@Url.Action("GetAccountById", "Account")">Go to Account Page</a> *@
+</div>
